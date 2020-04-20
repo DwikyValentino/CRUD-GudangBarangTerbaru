@@ -76,13 +76,25 @@
                                                     <td>
                                                         <a href="{{ action('PersediaanBarangController@show', $pb->id) }}" class="btn btn-show">Show</a>
                                                         <a href="{{ action('PersediaanBarangController@edit', $pb->id) }}" class="btn btn-warning">Ubah</a>
+                                                        {{-- {{ Form::open(array(
+                                                            'action'=>['PersediaanBarangController@destroy',$pb->id],
+                                                            'method'=>'DELETE',
+                                                            'id' => $ $pb->id,
+                                                            '
+                                                            style' => 'display:inline')) }}
+                                                            <button class='btn btn-sm btn-danger delete-btn'
+                                                                type="button"
+                                                                data-kodebarang='{{ $pb->kodebarang }}'
+                                                                data-formid='{{ $pb->id }}'>
+                                                            <i class="fa fa-times-circle"></i>Hapus</button>
+                                                        {{ Form::close() }} --}}
                                                         <button formaction="{{ action('PersediaanBarangController@destroy', $pb->id) }}" type="submit" class="btn btn-danger">Hapus</button>
                                                     </td>
                                                 </tr>
                                             @endforeach
                                         </tbody>
                                         <tfoot>
-                                            <tr>
+                                            {{-- <tr>
                                                 <th><input type="checkbox" class="selectall2"></th>
                                                 <th>Kode Barang</th>
                                                 <th>Nama Barang</th>
@@ -91,7 +103,7 @@
                                                 <th>Jumlah</th>
                                                 <th>Nilai</th>
                                                 <th width="230">Action</th>
-                                            </tr>
+                                            </tr> --}}
                                         </tfoot>
                                     </table>
                                     Halaman : {{ $persediaanbarang->currentPage() }} <br/>
@@ -123,6 +135,28 @@
                                 }
                                 })
                                 </script>
+                                {{-- <script type="text/javascript">
+                                    $('.delete-btn').on('Click', function(e){
+                                        e.preventDefault();
+                                        var self = $(this);
+                                        var kodebarang = $(this).attr("data-kodebarang");
+                                        var formid = $(this).attr("data-formid");
+                                        swal({
+                                            title: "DELETE",
+                                            text: "Hapus Data Barang : "+kodebarang+" ?",
+                                            type: "warning"
+                                            showCancelBUtton: true,
+                                            ConfirmButtonColor: "#D9534f",
+                                            ConfirmButtonText: "Yes, delete!",
+                                            closeOnConfirm: true
+                                        },
+                                        function(){
+                                            $("#"+formid).submit();
+                                        });
+                                    });
+                                </script> --}}
+                                
+                                    
                             </div>
                         </div>
                     </div>

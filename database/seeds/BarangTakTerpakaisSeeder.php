@@ -20,10 +20,10 @@ class BarangTakTerpakaisSeeder extends Seeder
  
     	      // insert data ke table barangtakterpakais menggunakan Faker
     		DB::table('barangtakterpakais')->insert([
-    			'kodebarang' => $faker->name,
+    			'kodebarang' => $faker->numberBetween(109-2067),
     			'namabarang' => $faker->name,
     			'tanggal' => $faker->date,
-    			'umur' => $faker->numberBetween(100,200)
+    			'alasan' => $faker->jobTitle
     		]);
  
     	}

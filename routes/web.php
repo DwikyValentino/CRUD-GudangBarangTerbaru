@@ -40,8 +40,5 @@ Route::resource('persediaanakhir', 'PersediaanAkhirController');
 Route::get('/laporanbarang.index', 'LaporanBarangController@index');
 Route::get('/search', 'LaporanBarangController@search');
 Route::delete('/deleteall', 'LaporanBarangController@deleteAll');
-<<<<<<< HEAD
 Route::resource('laporanbarang', 'LaporanBarangController');
-=======
 Route::resource('laporanbarang', 'LaporanBarangController');
->>>>>>> 86dfc6a203d0a3d8412b6e21105e39278eea48f7

@@ -10,10 +10,6 @@ class PersediaanAkhirController extends Controller
     /**
      * Display a listing of the resource.
      *
-<<<<<<< HEAD
-     * Semoga wabah corona cepat hilang
-=======
->>>>>>> 86dfc6a203d0a3d8412b6e21105e39278eea48f7
      * @return \Illuminate\Http\Response
      */
     public function index()
@@ -58,10 +54,7 @@ class PersediaanAkhirController extends Controller
             'jumlah_masuk' => 'required',
             'total' => 'required'
         ]);
-<<<<<<< HEAD
 
-=======
->>>>>>> 86dfc6a203d0a3d8412b6e21105e39278eea48f7
         $kode_barang = $request->get('kode_barang');
         $nama_barang = $request->get('nama_barang');
         $tanggal = $request->get('tanggal');
@@ -71,10 +64,7 @@ class PersediaanAkhirController extends Controller
         $jumlah_penjualan = $request->get('jumlah_penjualan');
         $jumlah_masuk= $request->get('jumlah_masuk');
         $total = $request->get('total');
-<<<<<<< HEAD
 
-=======
->>>>>>> 86dfc6a203d0a3d8412b6e21105e39278eea48f7
         $persediaanakhir = DB::insert('insert into persediaanakhir(kode_barang, nama_barang, tanggal, harga_pokok, harga_jual, jumlah_awal, jumlah_penjualan, jumlah_masuk, total) value(?,?,?,?,?,?,?,?,?)', [$kode_barang, $nama_barang, $tanggal, $harga_pokok, $harga_jual, $jumlah_awal, $jumlah_penjualan, $jumlah_masuk, $total]);
         if($persediaanakhir){
             $red = redirect('persediaanakhir')->with('succes', 'Data has been added');
@@ -138,10 +128,7 @@ class PersediaanAkhirController extends Controller
         $jumlah_penjualan = $request->get('jumlah_penjualan');
         $jumlah_masuk= $request->get('jumlah_masuk');
         $total = $request->get('total');
-<<<<<<< HEAD
 
-=======
->>>>>>> 86dfc6a203d0a3d8412b6e21105e39278eea48f7
         $persediaanakhir = DB::update('update persediaanakhir set kode_barang=?, nama_barang=?, tanggal=? ,harga_pokok=?, harga_jual=?, jumlah_awal=?, jumlah_penjualan=?, jumlah_masuk=?, total=? where id=?',[$kode_barang, $nama_barang, $tanggal, $harga_pokok, $harga_jual, $jumlah_awal, $jumlah_penjualan, $jumlah_masuk, $total, $id]);
         if($persediaanakhir){
             $red = redirect('persediaanakhir')->with('success','Data has been updated');
