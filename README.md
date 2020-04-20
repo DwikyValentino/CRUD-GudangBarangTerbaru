@@ -29,3 +29,5 @@
 -   git Pull [nama_remote] [nama_branch]
 
 # DEMO
+- admin123@gmail.com
+- admin123
