@@ -15,5 +15,6 @@ class DatabaseSeeder extends Seeder
         $this->call(LaporanTableSeeder::class);
         $this->call(PersediaanAkhirSeeder::class);
         $this->call(PersediaanBarangSeeder::class);
+        $this->call(UserSeeder::class);
     }
 }
