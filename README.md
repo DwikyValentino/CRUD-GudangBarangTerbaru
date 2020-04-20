@@ -8,7 +8,6 @@
 <p>Galan Dewa Septiana</p>
 <p>Dwiky Valentino</p>
 
-<P>Cara Install</p>
 ## Pitur HUHU
 -   CRUD [Selesai]
 
