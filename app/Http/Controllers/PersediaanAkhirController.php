@@ -20,7 +20,7 @@ class PersediaanAkhirController extends Controller
 
     public function search(Request $request)
     {
-        $search = $request->get('search');
+        $search = $request->get('searchpersediaanakhir');
         $persediaanakhir = DB::table('persediaanakhir')->where('nama_barang', 'like', '%'.$search.'%')->paginate(15);
         return view('persediaanakhir.index', ['persediaanakhir' => $persediaanakhir]);
     }

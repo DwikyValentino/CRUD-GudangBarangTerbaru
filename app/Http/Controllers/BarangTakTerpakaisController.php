@@ -20,7 +20,7 @@ class BarangTakTerpakaisController extends Controller
 
     public function search(Request $request)
     {
-        $search = $request->get('search');
+        $search = $request->get('searchbarangtakterpakais');
         $barangtakterpakais = DB::table('barangtakterpakais')->where('namabarang', 'like', '%'.$search.'%')->paginate(15);
         return view('barangtakterpakais.index', ['barangtakterpakais' => $barangtakterpakais]);
     }

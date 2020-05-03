@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/persediaanbarang.index', 'PersediaanBarangController@index');
-Route::get('/search', 'PersediaanBarangController@search');
+Route::get('/searchpersediaanbarang', 'PersediaanBarangController@search');
 Route::delete('/deleteall', 'PersediaanBarangController@deleteAll');
 Route::resource('persediaanbarang', 'PersediaanBarangController');
 
@@ -28,16 +28,16 @@ Route::resource('persediaanbarang', 'PersediaanBarangController');
 // Route::resource('cruds', 'CRUDController');
 
 Route::get('/barangtakterpakais.index', 'BarangTakTerpakaisController@index');
-Route::get('/search', 'BarangTakTerpakaisController@search');
+Route::get('/searchbarangtakterpakais', 'BarangTakTerpakaisController@search');
 Route::delete('/deleteall', 'BarangTakTerpakaisController@deleteAll');
 Route::resource('barangtakterpakais', 'BarangTakTerpakaisController');
 
 Route::get('/persediaanakhir.index', 'PersediaanAkhirController@index');
-Route::get('/search', 'PersediaanAkhirController@search');
+Route::get('/searchpersediaanakhir', 'PersediaanAkhirController@search');
 Route::delete('/deleteall', 'PersediaanAkhirController@deleteAll');
 Route::resource('persediaanakhir', 'PersediaanAkhirController');
 
 Route::get('/laporanbarang.index', 'LaporanBarangController@index');
-Route::get('/search', 'LaporanBarangController@search');
+Route::get('/searchlaporanbarang', 'LaporanBarangController@search');
 Route::delete('/deleteall', 'LaporanBarangController@deleteAll');
 Route::resource('laporanbarang', 'LaporanBarangController');

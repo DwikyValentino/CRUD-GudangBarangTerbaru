@@ -20,7 +20,7 @@ class LaporanBarangController extends Controller
 
     public function search(Request $request)
     {
-        $search = $request->get('search');
+        $search = $request->get('searchlaporanbarang');
         $laporanbarang = DB::table('laporanbarang')->where('namabarang', 'like', '%'.$search.'%')->paginate(15);
         return view('laporanbarang.index', ['laporanbarang' => $laporanbarang]);
     }

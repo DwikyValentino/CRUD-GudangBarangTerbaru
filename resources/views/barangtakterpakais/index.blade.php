@@ -32,9 +32,9 @@
                                         <h1>CRUD Gudang Barang</h1>
                                     </div>
                                     <div class="col-md-4">
-                                        <form action="/search" method="GET">
+                                        <form action="/searchbarangtakterpakais" method="GET">
                                             <div class="input-group">
-                                            <input type="search" name="search" class="form-control">
+                                            <input type="search" name="searchbarangtakterpakais" class="form-control">
                                             <span class="input-group-prepend">
                                                 <button type="submit" class="btn btn-primary">Search</button>
                                             </span>

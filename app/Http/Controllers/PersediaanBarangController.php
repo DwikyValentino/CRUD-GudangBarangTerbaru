@@ -20,7 +20,7 @@ class PersediaanBarangController extends Controller
 
     public function search(Request $request)
     {
-        $search = $request->get('search');
+        $search = $request->get('searchpersediaanbarang');
         $persediaanbarang = DB::table('persediaanbarang')->where('namabarang', 'like', '%'.$search.'%')->paginate(15);
         return view('persediaanbarang.index', ['persediaanbarang' => $persediaanbarang]);
     }
