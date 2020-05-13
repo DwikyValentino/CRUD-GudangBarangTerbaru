@@ -65,7 +65,7 @@
                                                     <label>Nilai</label>
                                                     <input type="text" name="nilai" class="form-control" value="{{ $pb->nilai }}">
                                                 </div>
-                                                <button type="submit" class="btn btn-warning">Update</button>
+                                                <button onclick="return confirm('apakah anda yakin ingin mengubah data ini?')" type="submit" class="btn btn-warning">Update</button>
                                                 <a href="{{ action('PersediaanBarangController@index') }}" class="btn btn-default">Back</a>
                                             </form>
                                         @endforeach

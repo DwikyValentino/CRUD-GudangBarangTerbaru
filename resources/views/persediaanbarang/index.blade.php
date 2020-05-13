@@ -76,7 +76,7 @@
                                                     <td>
                                                         <a href="{{ action('PersediaanBarangController@show', $pb->id) }}" class="btn btn-show">Show</a>
                                                         <a href="{{ action('PersediaanBarangController@edit', $pb->id) }}" class="btn btn-warning">Ubah</a>
-                                                        <button formaction="{{ action('PersediaanBarangController@destroy', $pb->id) }}" type="submit" class="btn btn-danger">Hapus</button>
+                                                        <button formaction="{{ action('PersediaanBarangController@destroy', $pb->id) }}" type="submit" class="btn btn-danger" onclick="return confirm('apakah anda yakin ingin menghapus data ini?')">Hapus</button>
                                                     </td>
                                                 </tr>
                                             @endforeach

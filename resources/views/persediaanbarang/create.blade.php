@@ -63,7 +63,7 @@
                                                 <label>Nilai</label>
                                                 <input class="form-control" type="number" name="nilai" placeholder="Nilai"/>
                                             </div>
-                                            <button class="btn btn-primary" type="submit">Submit</button>
+                                            <button onclick="return confirm('apakah anda yakin ingin menambah data ini?')" class="btn btn-primary" type="submit">Submit</button>
                                             <a href="{{ action('PersediaanBarangController@index') }}" class="btn btn-default"> Kembali</a>
                                         </form>
                                     </div>
