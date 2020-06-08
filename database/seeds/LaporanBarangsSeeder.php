@@ -4,7 +4,7 @@ use Illuminate\Database\Seeder;
 
 use Faker\Factory as Faker;
 
-class PersediaanBarangSeeder extends Seeder
+class LaporanBarangsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -18,13 +18,13 @@ class PersediaanBarangSeeder extends Seeder
     	for($i = 1; $i <= 25; $i++){
  
     	      // insert data ke table product menggunakan Faker
-    		DB::table('persediaanbarang')->insert([
+    		DB::table('laporanbarangs')->insert([
                 'kodebarang' => $faker->name,
                 'namabarang' => $faker->name,
-                'hargapokok' => $faker->numberBetween(5000,50000),
-                'hargajual' => $faker->numberBetween(4000,70000),
-                'jumlah' => $faker->numberBetween(1,200),
-        	    'nilai' => $faker->numberBetween(1,200)
+                'stokawal' => $faker->numberBetween(1,200),
+                'barang_masuk' => $faker->numberBetween(1,200),
+                'barang_keluar' => $faker->numberBetween(1,200),
+    			'stokakhir' => $faker->numberBetween(1,200)
     		]);
  
     	}
