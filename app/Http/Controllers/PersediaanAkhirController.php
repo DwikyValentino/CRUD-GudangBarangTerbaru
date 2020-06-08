@@ -54,6 +54,7 @@ class PersediaanAkhirController extends Controller
             'jumlah_masuk' => 'required',
             'total' => 'required'
         ]);
+
         $kode_barang = $request->get('kode_barang');
         $nama_barang = $request->get('nama_barang');
         $tanggal = $request->get('tanggal');
@@ -63,6 +64,7 @@ class PersediaanAkhirController extends Controller
         $jumlah_penjualan = $request->get('jumlah_penjualan');
         $jumlah_masuk= $request->get('jumlah_masuk');
         $total = $request->get('total');
+
         $persediaanakhir = DB::insert('insert into persediaanakhir(kode_barang, nama_barang, tanggal, harga_pokok, harga_jual, jumlah_awal, jumlah_penjualan, jumlah_masuk, total) value(?,?,?,?,?,?,?,?,?)', [$kode_barang, $nama_barang, $tanggal, $harga_pokok, $harga_jual, $jumlah_awal, $jumlah_penjualan, $jumlah_masuk, $total]);
         if($persediaanakhir){
             $red = redirect('persediaanakhir')->with('succes', 'Data has been added');
@@ -126,6 +128,7 @@ class PersediaanAkhirController extends Controller
         $jumlah_penjualan = $request->get('jumlah_penjualan');
         $jumlah_masuk= $request->get('jumlah_masuk');
         $total = $request->get('total');
+
         $persediaanakhir = DB::update('update persediaanakhir set kode_barang=?, nama_barang=?, tanggal=? ,harga_pokok=?, harga_jual=?, jumlah_awal=?, jumlah_penjualan=?, jumlah_masuk=?, total=? where id=?',[$kode_barang, $nama_barang, $tanggal, $harga_pokok, $harga_jual, $jumlah_awal, $jumlah_penjualan, $jumlah_masuk, $total, $id]);
         if($persediaanakhir){
             $red = redirect('persediaanakhir')->with('success','Data has been updated');

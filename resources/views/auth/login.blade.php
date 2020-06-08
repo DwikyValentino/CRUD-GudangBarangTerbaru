@@ -39,6 +39,7 @@
                             </div>
                         </div>
 
+<<<<<<< HEAD
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
@@ -65,6 +66,40 @@
                             </div>
                         </div>
                     </form>
+=======
+                                <div class="col-6">
+                                    {{-- <button class="btn btn-primary px-4">Login</button> --}}
+                                </div>
+                                <div class="col-6 text-right">
+                                    {{-- <button class="btn btn-link px-0" type="button">Forgot password?</button> --}}
+                                </div>
+                            </div>
+                        </form>
+                        <div>
+                            {{-- @if (Route::has('register'))
+                                <a href="{{ route('auth.register') }}" class="btn btn-primary">Register</a>
+                            @endif --}}
+                            @if (Route::has('login'))
+                            <div class="center links">
+                                @auth
+                                    <a href="{{ url('/home') }}" class="btn btn-primary">Home</a>
+                                @else
+                                    <a href="{{ route('login') }}" class="btn btn-primary">Login</a>
+            
+                                    @if (Route::has('register'))
+                                        <a href="{{ route('register') }}" class="btn btn-primary">Register</a>
+                                    @endif
+                                @endauth
+                            </div>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-white bg-primary py-5 d-md-down-none" style="width:44%">
+                    <div class="card-body text-center">
+                        
+                    </div>
+>>>>>>> 30516eb37fec550e4877ce437a72fa061826eea4
                 </div>
             </div>
         </div>

@@ -141,12 +141,5 @@
     </div>
 </main>
 @endsection
+
 @endsection
-
-
-
-
-
-
-
-

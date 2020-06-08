@@ -13,22 +13,20 @@ class PersediaanBarangSeeder extends Seeder
      */
     public function run()
     {
+        $faker = Faker::create('id_ID');
  
-    	$faker = Faker::create('id_ID');
+    	for($i = 1; $i <= 50; $i++){
  
-    	for($i = 1; $i <= 25; $i++){
- 
-    	      // insert data ke table persediaanbarang menggunakan Faker
+    	      // insert data ke table product menggunakan Faker
     		DB::table('persediaanbarang')->insert([
-    			'kodebarang' => $faker->name,
+                'kodebarang' => $faker->numberBetween(7,107),
                 'namabarang' => $faker->name,
-                'hargapokok' => $faker->numberBetween(1000,200000),
-                'hargajual' => $faker->numberBetween(1000,200000),
-                'jumlah' => $faker->numberBetween(1,200),
-    			'nilai' => $faker->numberBetween(1,200)
+                'hargapokok' => $faker->numberBetween(5000,50000),
+                'hargajual' => $faker->numberBetween(4000,70000),
+                'jumlah' => $faker->numberBetween(1,100),
+        	    'nilai' => $faker->numberBetween(1000000,10000000)
     		]);
  
     	}
- 
     }
 }
