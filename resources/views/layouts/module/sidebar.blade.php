@@ -30,6 +30,11 @@
                 <i class="nav-icon icon-drop">Laporan Barang</i>
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('gambar.index')}}">
+                <i class="nav-icon icon-drop">Gambar Barang</i>
+            </a>
+        </li>
         <!-- <li class="nav-item nav-dropdown">
             <a class="">
                         <i class="nav-icon icon-puzzle"></i> Gudang

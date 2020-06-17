@@ -42,3 +42,5 @@ Route::get('/searchlaporanbarang', 'LaporanBarangController@search');
 Route::delete('/deleteall', 'LaporanBarangController@deleteAll');
 Route::resource('laporanbarang', 'LaporanBarangController');
 Route::resource('laporanbarang', 'LaporanBarangController');
+
+Route::resource('gambar', 'GambarController');

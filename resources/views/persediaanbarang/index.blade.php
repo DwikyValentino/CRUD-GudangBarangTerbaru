@@ -54,6 +54,7 @@
                                         <thead>
                                             <tr>
                                                 <th><input type="checkbox" class="selectall"></th>
+                                                <th>Gambar</th>
                                                 <th>Kode Barang</th>
                                                 <th>Nama Barang</th>
                                                 <th>Harga Pokok</th>
@@ -67,6 +68,10 @@
                                             @foreach($persediaanbarang as $pb)
                                                 <tr>
                                                     <td><input type="checkbox" name="ids[]" class="selectbox" value="{{ $pb -> id }}"></td>
+                                                   <td> @if ($pb->gambar)
+                                                        <img src="{{ asset('storage/public/'.$pb->gambar) }}" width="50px"/>
+                                                    @endif
+                                                </td>
                                                     <td>{{ $pb -> kodebarang}}</td>
                                                     <td>{{ $pb -> namabarang}}</td>
                                                     <td>{{ $pb -> hargapokok}}</td>
@@ -76,9 +81,7 @@
                                                     <td>
                                                         <a href="{{ action('PersediaanBarangController@show', $pb->id) }}" class="btn btn-show">Show</a>
                                                         <a href="{{ action('PersediaanBarangController@edit', $pb->id) }}" class="btn btn-warning">Ubah</a>
-<<<<<<< HEAD
                                                         <button formaction="{{ action('PersediaanBarangController@destroy', $pb->id) }}" type="submit" class="btn btn-danger" onclick="return confirm('apakah anda yakin ingin menghapus data ini?')">Hapus</button>
-=======
                                                         {{-- {{ Form::open(array(
                                                             'action'=>['PersediaanBarangController@destroy',$pb->id],
                                                             'method'=>'DELETE',
@@ -91,8 +94,7 @@
                                                                 data-formid='{{ $pb->id }}'>
                                                             <i class="fa fa-times-circle"></i>Hapus</button>
                                                         {{ Form::close() }} --}}
-                                                        <button formaction="{{ action('PersediaanBarangController@destroy', $pb->id) }}" type="submit" class="btn btn-danger">Hapus</button>
->>>>>>> 30516eb37fec550e4877ce437a72fa061826eea4
+                                                        {{-- <button formaction="{{ action('PersediaanBarangController@destroy', $pb->id) }}" type="submit" class="btn btn-danger">Hapus</button> --}}
                                                     </td>
                                                 </tr>
                                             @endforeach

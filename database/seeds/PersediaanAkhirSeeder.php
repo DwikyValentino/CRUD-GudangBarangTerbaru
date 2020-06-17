@@ -4,7 +4,7 @@ use Illuminate\Database\Seeder;
 
 use Faker\Factory as Faker;
 
-class PersediaanAkhirsSeeder extends Seeder
+class PersediaanAkhirSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,13 +13,12 @@ class PersediaanAkhirsSeeder extends Seeder
      */
     public function run()
     {
- 
-    	$faker = Faker::create('id_ID');
+        $faker = Faker::create('id_ID');
  
     	for($i = 1; $i <= 25; $i++){
  
     	      // insert data ke table persediaanbarang menggunakan Faker
-    		DB::table('persediaanakhirs')->insert([
+    		DB::table('persediaanakhir')->insert([
     			'kode_barang' => $faker->name,
                 'nama_barang' => $faker->name,
                 'tanggal' => $faker->date,
@@ -32,6 +31,5 @@ class PersediaanAkhirsSeeder extends Seeder
     		]);
  
     	}
- 
     }
 }

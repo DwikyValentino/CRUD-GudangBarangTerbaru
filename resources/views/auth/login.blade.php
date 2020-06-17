@@ -38,8 +38,6 @@
                                 @enderror
                             </div>
                         </div>
-
-<<<<<<< HEAD
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
@@ -66,7 +64,6 @@
                             </div>
                         </div>
                     </form>
-=======
                                 <div class="col-6">
                                     {{-- <button class="btn btn-primary px-4">Login</button> --}}
                                 </div>
@@ -99,7 +96,6 @@
                     <div class="card-body text-center">
                         
                     </div>
->>>>>>> 30516eb37fec550e4877ce437a72fa061826eea4
                 </div>
             </div>
         </div>

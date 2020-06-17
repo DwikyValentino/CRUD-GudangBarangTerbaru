@@ -51,6 +51,10 @@ class PersediaanBarangController extends Controller
             'jumlah' => 'required',
             'nilai' => 'required'
         ]);
+        if($request->file('gambar')){
+            $file = $request->file('gambar')->store('gambar', 'public'); 
+            $red->gambar = $file;
+        }
         $kodebarang = $request->get('kodebarang');
         $namabarang = $request->get('namabarang');
         $hargapokok = $request->get('hargapokok');

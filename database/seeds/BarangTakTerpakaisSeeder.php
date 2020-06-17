@@ -14,13 +14,10 @@ class BarangTakTerpakaisSeeder extends Seeder
     public function run()
     {
  
-    	$faker = Faker::create('id_ID');
- 
-<<<<<<< HEAD
+		$faker = Faker::create('id_ID');
+		
     	for($i = 1; $i <= 25; $i++){
-=======
-    	for($i = 1; $i <= 100; $i++){
->>>>>>> 30516eb37fec550e4877ce437a72fa061826eea4
+
  
     	      // insert data ke table barangtakterpakais menggunakan Faker
     		DB::table('barangtakterpakais')->insert([

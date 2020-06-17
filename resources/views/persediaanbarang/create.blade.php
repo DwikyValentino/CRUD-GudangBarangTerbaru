@@ -37,8 +37,12 @@
                                                 </ul>
                                             </div>
                                         @endif
-                                        <form action="{{ action('PersediaanBarangController@store') }}" method="POST">
+                                        <form action="{{ action('PersediaanBarangController@store') }}" enctype="multipart/form-data" method="POST">
                                             @csrf
+                                            <div class="form-group" class="col-md-6">
+                                                <label>Gambar Barang</label>
+                                                <input id="gambar" name="gambar" type="file" class="form-control"/>
+                                            </div>
                                             <div class="form-group" class="col-md-6">
                                                 <label>Kode Barang</label>
                                                 <input class="form-control" type="text" name="kodebarang" placeholder="Kode Barang"/>

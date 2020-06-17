@@ -9,7 +9,7 @@
 <main class="main">
     <ol class="breadcrumb">
         <li class="breadcrumb-item">Home</li>
-        <li class="breadcrumb-item active">Laporan Barang</li>
+        <li class="breadcrumb-item active">Gambar Barang</li>
         <li class="breadcrumb-item active">Index</li>
     </ol>
     <div class="container-fluid">
@@ -29,9 +29,9 @@
                                 @endif
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h1>CRUD Gudang Barang</h1>
+                                        <h1>Gambar Gudang Barang</h1>
                                     </div>
-                                    <div class="col-md-4">
+                                    {{-- <div class="col-md-4">
                                         <form action="/searchlaporanbarang" method="GET">
                                             <div class="input-group">
                                             <input type="search" name="searchlaporanbarang" class="form-control">
@@ -40,9 +40,9 @@
                                             </span>
                                             </div>
                                         </form>
-                                    </div>
+                                    </div> --}}
                                     <div class="col-md-2 text-right">
-                                        <a href="{{ action('LaporanBarangController@create') }}" class="btn btn-primary"> + Tambah Data</a>
+                                        <a href="{{ action('GambarController@create') }}" class="btn btn-primary"> + Tambah Gambar</a>
                                     </div>
                                 </div>
                                     <form method="POST">
@@ -54,52 +54,40 @@
                                         <thead>
                                             <tr>
                                                 <th><input type="checkbox" class="selectall"></th>
-                                                <th>Kode Barang</th>
+                                                <th>Gambar</th>
                                                 <th>Nama Barang</th>
-                                                <th>Stok Awal</th>
-                                                <th>Barang Masuk</th>
-                                                <th>Barang Keluar</th>
-                                                <th>Stok Akhir</th>
+                                                <th>Keterangan</th>
                                                 <th width="230">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach($laporanbarang as $lb)
+                                            @foreach($gambar as $g)
                                                 <tr>
-                                                    <td><input type="checkbox" name="ids[]" class="selectbox" value="{{ $lb -> id }}"></td>
-                                                    <td>{{ $lb->kodebarang }}</td>
-                                                    <td>{{ $lb->namabarang }}</td>
-                                                    <td>{{ $lb->stokawal }}</td>
-                                                    <td>{{ $lb->barang_masuk }}</td>
-                                                    <td>{{ $lb->barang_keluar }}</td>
-                                                    <td>{{ $lb->stokakhir }}</td>
+                                                    <td><input type="checkbox" name="ids[]" class="selectbox" value="{{ $g -> id }}"></td>
+                                                    <td>
+                                                        @if ($g->gambar)
+                                                        <img src="{{ asset('storage/'.$g->gambar) }}" width="70"/>
+                                                        @else
+                                                        N/A
+                                                        @endif
+                                                    </td>
+                                                    <td>{{ $g->namabarang }}</td>
+                                                    <td>{{ $g->keterangan }}</td>
                                                     
                                                     <td>
-                                                        <a href="{{ action('LaporanBarangController@show', $lb->id) }}" class="btn btn-show">Show</a>
-                                                        <a href="{{ action('LaporanBarangController@edit', $lb->id) }}" class="btn btn-warning">Ubah</a>
-                                                        <button formaction="{{ action('LaporanBarangController@destroy', $lb->id) }}" type="submit" class="btn btn-danger">Hapus</button>
+                                                        <a href="{{ action('GambarController@show', $g->id) }}" class="btn btn-show">Show</a>
+                                                        {{-- <a href="{{ action('GambarController@edit', $g->id) }}" class="btn btn-warning">Ubah</a> --}}
+                                                        <button formaction="{{ action('GambarController@destroy', $g->id) }}" type="submit" class="btn btn-danger">Hapus</button>
                                                     </td>
                                                 </tr>
                                             @endforeach
                                         </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <th><input type="checkbox" class="selectall2"></th>
-                                                <th>Kode Barang</th>
-                                                <th>Nama Barang</th>
-                                                <th>Stok Awal</th>
-                                                <th>Barang Masuk</th>
-                                                <th>Barang Keluar</th>
-                                                <th>Stok Akhir</th>
-                                                <th width="230">Action</th>
-                                            </tr>
-                                        </tfoot>
                                     </table>
-                                    Halaman : {{ $laporanbarang->currentPage() }} <br/>
-                                    Jumlah Data : {{ $laporanbarang->total() }} <br/>
-                                    Data Per Halaman : {{ $laporanbarang->perPage() }} <br/>
+                                    Halaman : {{ $gambar->currentPage() }} <br/>
+                                    Jumlah Data : {{ $gambar->total() }} <br/>
+                                    Data Per Halaman : {{ $gambar->perPage() }} <br/>
                                     <p><br/></p>
-                                    {{ $laporanbarang->links() }}
+                                    {{ $gambar->links() }}
                                 </form>
                                 
 
